@@ -43,16 +43,16 @@ PostgreSQL is the right choice once any of these is true, which is why the produ
 
 ```mermaid
 flowchart LR
-  A[Every change] --> B[(Database<br/>SQLite today · PostgreSQL next)]
+  A[Every change] --> B[(Database<br/>PostgreSQL in production · SQLite in the showcase)]
   B --> C[Automatic Excel copy<br/>readable by anyone]
   B --> D[Backups<br/>one-click · automatic · before every update]
-  D -. next .-> E[(PostgreSQL backup database<br/>point-in-time recovery)]
+  D --> E[(PostgreSQL backups<br/>point-in-time recovery, in production)]
 ```
 
 1. **The database** is the single master copy.
 2. **The Excel copy** is rewritten after every change, so the data can always be read in Excel. If someone edits that Excel, the app puts it aside for review; nothing changes until someone accepts.
 3. **Backups** are taken in one click, automatically, and before every software update.
-4. **Next:** PostgreSQL adds a dedicated backup database and point-in-time recovery.
+4. **In production,** PostgreSQL adds server-grade backups with point-in-time recovery.
 
 ## Delivery so far
 
