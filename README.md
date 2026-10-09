@@ -124,7 +124,7 @@ flowchart LR
   B[Browser on any office PC] --> API[FastAPI layer]
   API --> S[Services: prices, impact, versions, substitution, audit, roles, bulk upload]
   S --> E[Costing engine: pure Decimal maths, no database or UI]
-  S --> DB[(SQLite: effective-dated prices, versioned recipes, soft deletes, audit log)]
+  S --> DB[(PostgreSQL in production · SQLite in this build: effective-dated prices, versioned recipes, soft deletes, audit log)]
   X[Legacy Excel workbook] -. one-time import .-> S
 ```
 
@@ -172,7 +172,7 @@ Happy to talk through how it works, the design decisions, or how something simil
 
 ## Tools
 
-`Python 3.12` · `FastAPI` · `SQLAlchemy 2` · `SQLite` · `Pydantic` · `openpyxl` · `pytest` · `HTML / CSS / JavaScript`
+`Python 3.12` · `FastAPI` · `SQLAlchemy 2` · `PostgreSQL` · `SQLite` · `Pydantic` · `openpyxl` · `pytest` · `HTML / CSS / JavaScript`
 
 ## Skills shown
 

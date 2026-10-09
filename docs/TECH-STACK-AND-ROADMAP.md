@@ -23,16 +23,16 @@ The first release was built to be **simple to run, safe with data and easy to up
 | **Users and security** | Own user accounts, salted PBKDF2 password hashes, signed session cookie, six roles | Same model, more users and roles as departments join | Security rules live in the services, so they move with the app |
 | **Quality** | 62 automated tests (pytest) run before every release | Tests run automatically on every change | Upgrades are checked against the same tests that protect today's numbers |
 
-## Why start on SQLite
+## Why this showcase build uses SQLite
 
 - **Zero setup.** The whole database is one file. Nothing to install, configure or maintain on the office PC.
 - **Easy to back up.** A backup is a copy of that file, taken in one click or automatically.
-- **Enough for the first phase.** A small team on one office network is well within what SQLite handles.
+- **Enough for a demo.** One person or a small team on one PC is well within what SQLite handles.
 - **No lock-in.** All data access goes through SQLAlchemy, so the same application code runs on PostgreSQL.
 
-## When to move to PostgreSQL
+## What PostgreSQL adds (and why production uses it)
 
-Any one of these is the signal:
+PostgreSQL is the right choice once any of these is true, which is why the production system uses it:
 
 - many people saving changes at the same time, every day
 - history tables (prices, versions, audit log) growing into hundreds of thousands of rows
