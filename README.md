@@ -31,7 +31,7 @@
 - [Code samples](#-code-samples)
 - [Questions](#-questions)
 
-More detail: **[Architecture](docs/ARCHITECTURE.md)** · **[Data model](docs/DATA-MODEL.md)** · **[Feature walkthrough](docs/FEATURES.md)** · **[Code samples](docs/CODE-SAMPLES.md)**
+More detail: **[How it works](docs/HOW-IT-WORKS.md)** · **[Technology stack and upgrade path](docs/TECH-STACK-AND-ROADMAP.md)** · **[Architecture](docs/ARCHITECTURE.md)** · **[Data model](docs/DATA-MODEL.md)** · **[Feature walkthrough](docs/FEATURES.md)** · **[Code samples](docs/CODE-SAMPLES.md)**
 
 ---
 
