@@ -131,6 +131,7 @@ flowchart LR
 - **About 30 tables**: materials, prices, suppliers, recipes and their versions, the product hierarchy, cost heads and rates, freight, customers, margins, prices given, users and the audit log. See **[docs/DATA-MODEL.md](docs/DATA-MODEL.md)**.
 - **Offline by design.** It carries its own Python runtime and libraries, so it needs no internet and no installation on other PCs.
 - **Safe updates.** An update package backs up the data, tries the new version on a copy first, keeps the previous version and **rolls back by itself** if anything fails. Plus automatic and one-click backups.
+- **Built to grow.** SQLite for the initial phase, with PostgreSQL planned for data management and a backup database; HTML/JavaScript screens today, with a front-end framework planned. The automatic Excel copy stays as a readable backup. See **[Technology stack and upgrade path](docs/TECH-STACK-AND-ROADMAP.md)**.
 - **Live refresh.** Pages update within seconds when someone else saves, without losing what you are typing.
 
 Full detail: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**
