@@ -15,8 +15,8 @@
 
 <p align="center"><sub>All screenshots show the real application running on <b>made-up demo data</b>. The company's products, customers, suppliers and prices are not shown anywhere in this repository.</sub></p>
 
-> **This repository explains the project. It does not contain the full source code.**
-> A few short excerpts are included so you can see how it is written. To get the complete application, see **[Get the full source code](#-get-the-full-source-code)**.
+> **This repository explains the project. The source code is not public.**
+> A few short excerpts are included so you can see how it is written.
 
 ---
 
@@ -29,7 +29,7 @@
 - [How it is built](#-how-it-is-built)
 - [How I made sure it is right](#-how-i-made-sure-it-is-right)
 - [Code samples](#-code-samples)
-- [Get the full source code](#-get-the-full-source-code)
+- [Questions](#-questions)
 
 More detail: **[Architecture](docs/ARCHITECTURE.md)** · **[Data model](docs/DATA-MODEL.md)** · **[Feature walkthrough](docs/FEATURES.md)** · **[Code samples](docs/CODE-SAMPLES.md)**
 
@@ -160,20 +160,9 @@ def _apply(item: CostItemInput, rm_cost: Decimal, running: Decimal, messages) ->
 
 More excerpts, including recipe validation and the cost build-up loop: **[docs/CODE-SAMPLES.md](docs/CODE-SAMPLES.md)**
 
-## 🛒 Get the full source code
+## 💬 Questions
 
-The complete application is available to buy. It includes:
-
-- the full Python source: engine, services, API and database models
-- the browser front end (plain HTML, CSS and JavaScript, no internet libraries)
-- all 62 automated tests
-- the Excel import and bulk-upload templates
-- the offline packaging, the update and rollback scripts, and the backup tools
-- a setup guide
-
-It is sold **without** any company data: you start with an empty database, or import your own costing workbook.
-
-**To buy, or to ask a question**, email **abhishekvtiwari008@gmail.com** or message me on **[LinkedIn](https://www.linkedin.com/in/abhishekvtiwari/)**. Tell me a little about your business and how you cost products today, and I will reply with the price and what setup help is included.
+Happy to talk through how it works, the design decisions, or how something similar could help your business. Email **abhishekvtiwari008@gmail.com** or message me on **[LinkedIn](https://www.linkedin.com/in/abhishekvtiwari/)**.
 
 ---
 

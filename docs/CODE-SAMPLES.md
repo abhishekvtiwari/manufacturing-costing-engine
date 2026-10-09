@@ -2,7 +2,7 @@
 
 [← Back to the overview](../README.md)
 
-Short excerpts from the costing engine, to show how it is written. They are not runnable on their own; the full application is available to buy ([details](../README.md#-get-the-full-source-code)).
+Short excerpts from the costing engine, to show how it is written. They are not runnable on their own; the full source code is not public.
 
 ## Exact money: never a float
 
