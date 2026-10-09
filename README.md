@@ -6,10 +6,13 @@
   <img src="https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.12">
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/SQLAlchemy_2-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy 2">
-  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+  <img src="https://img.shields.io/badge/PostgreSQL-production-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL in production">
+  <img src="https://img.shields.io/badge/SQLite-showcase_build-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite in this showcase build">
   <img src="https://img.shields.io/badge/Tests-62_passing-2ea043?style=for-the-badge" alt="62 tests">
   <img src="https://img.shields.io/badge/Runs-fully_offline-555555?style=for-the-badge" alt="Runs fully offline">
 </p>
+
+<p align="center"><sub>The production system at work runs on PostgreSQL. This showcase build uses SQLite so it runs offline on one PC with nothing to install. <a href="docs/TECH-STACK-AND-ROADMAP.md">Technology stack →</a></sub></p>
 
 <p align="center"><img src="images/home.jpg" alt="Search and overview screen" width="100%"></p>
 
@@ -131,7 +134,7 @@ flowchart LR
 - **About 30 tables**: materials, prices, suppliers, recipes and their versions, the product hierarchy, cost heads and rates, freight, customers, margins, prices given, users and the audit log. See **[docs/DATA-MODEL.md](docs/DATA-MODEL.md)**.
 - **Offline by design.** It carries its own Python runtime and libraries, so it needs no internet and no installation on other PCs.
 - **Safe updates.** An update package backs up the data, tries the new version on a copy first, keeps the previous version and **rolls back by itself** if anything fails. Plus automatic and one-click backups.
-- **Built to grow.** SQLite for the initial phase, with PostgreSQL planned for data management and a backup database; HTML/JavaScript screens today, with a front-end framework planned. The automatic Excel copy stays as a readable backup. See **[Technology stack and upgrade path](docs/TECH-STACK-AND-ROADMAP.md)**.
+- **Built to grow.** Production runs on PostgreSQL; this showcase build uses SQLite so it runs offline with nothing to install. HTML/JavaScript screens today, with React + TypeScript planned. The automatic Excel copy stays as a readable backup. See **[Technology stack and upgrade path](docs/TECH-STACK-AND-ROADMAP.md)**.
 - **Live refresh.** Pages update within seconds when someone else saves, without losing what you are typing.
 
 Full detail: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**

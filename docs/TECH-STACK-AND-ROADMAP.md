@@ -2,18 +2,20 @@
 
 [← Back to the overview](../README.md)
 
+> **The production system at work runs on PostgreSQL. This showcase build uses SQLite so it runs offline on one PC with nothing to install.**
+
 The first release was built to be **simple to run, safe with data and easy to upgrade**. It runs on one office computer with no installation and no internet. Every layer was chosen so it can be upgraded later without rewriting the business logic.
 
 > **Status key:** ✅ built and in use · 🔜 planned upgrade (not built yet)
 
 ## The stack at a glance
 
-| Layer | Today: first release ✅ | Upgrade path 🔜 | Why this order |
+| Layer | This showcase build ✅ | Upgrade path 🔜 | Why this order |
 |---|---|---|---|
 | **Screens (front end)** | HTML, CSS and plain JavaScript, served by the app itself. No internet libraries | A component **framework** (React + TypeScript), keeping the same screens and API | Plain HTML/JS works fully offline with nothing to install. A framework adds reusable components, richer charts and faster screen development once the design is settled |
 | **Application (back end)** | Python 3.12 + **FastAPI** + Pydantic | Stays the same; add background jobs for very large recalculations and imports | FastAPI is fast, typed and documents its own API, so the front end can be swapped without touching it |
 | **Calculation engine** | Pure Python, exact `Decimal` maths, no database or screen code | Unchanged | The costing rules are the most valuable part. Keeping them pure means no upgrade can change a number by accident |
-| **Data management** | **SQLite**: one database file, used for the initial phase | **PostgreSQL** for data management | SQLite needs zero setup and is ideal while the system proves itself. PostgreSQL handles many people saving at once, larger history tables and server-grade backups |
+| **Data management** | **SQLite**: one database file, so the showcase runs offline with nothing to install | **PostgreSQL**, as the production system at work already uses | SQLite needs zero setup and is ideal while the system proves itself. PostgreSQL handles many people saving at once, larger history tables and server-grade backups |
 | **Database access** | SQLAlchemy 2 (database-independent) | Same code pointed at PostgreSQL, plus versioned schema migrations (Alembic) | Because all data access goes through SQLAlchemy, the move to PostgreSQL is a configuration change and a one-time data copy, not a rewrite |
 | **Backups** | One-click backup, automatic backups, and an automatic backup before every update | PostgreSQL scheduled backups with point-in-time recovery, plus a backup database | Today a backup is a copy of one file. PostgreSQL adds restore-to-any-minute and a standby copy |
 | **Excel** | Import of the original workbook, Excel templates for bulk upload, Excel download, and an **automatic Excel copy** of the whole database after every change | Kept as it is | People who prefer Excel can always read the data, and the Excel copy is a second, human-readable backup |
@@ -67,6 +69,6 @@ flowchart LR
 | 9 | Domestic and export costing | ✅ |
 | 10 | Impact analysis | ✅ |
 | 11 | Testing across many products, reconciled to the workbook | ✅ |
-| 12 | Front-end framework and PostgreSQL | 🔜 |
+| 12 | Showcase build: move from SQLite to PostgreSQL (as in production), plus React + TypeScript | 🔜 |
 
 [← Back to the overview](../README.md)
