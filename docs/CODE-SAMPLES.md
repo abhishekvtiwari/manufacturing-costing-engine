@@ -78,8 +78,8 @@ target_price = running                # after margin
 ```python
 def test_recipe_not_totalling_100_is_refused():
     result = calculate(CostingInput(components=[
-        line("Filler", qty="70", price="17.80"),
-        line("Polymer", qty="29.5", price="98.00"),
+        line("RM Demo 2", qty="70", price="17.80"),
+        line("RM Demo 5", qty="29.5", price="98.00"),
     ]))
     assert not result.is_valid()
     assert any(m.code == "TOTAL_NOT_100" for m in result.messages)

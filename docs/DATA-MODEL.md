@@ -25,7 +25,7 @@ erDiagram
 | Table | Holds |
 |---|---|
 | Raw materials | Code, name, category, unit, tax code, status |
-| Categories | Fillers, polymers, additives, pigments and so on |
+| Categories | Material groups (shown as Category A–D in the demo) |
 | Suppliers, material–supplier links | Who supplies what, with make and specification |
 | Raw-material prices | Price per market (domestic / export) with an **effective-from date** and an optional landed-cost breakdown |
 | Markets, exchange rates | Domestic and export; USD rate used for export costing |
